@@ -31,10 +31,15 @@ body {
 }
 
 .container {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $container-max-width;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 10%;
+    padding-right: 10%;
+    width:100%;
+}
+
+.highlight {
+    background-color: $alternate-bg-color;
 }
 
 .md-right {
@@ -52,7 +57,6 @@ body {
 }
 
 .hero {
-    padding-bottom: 2em;
     text-align: center;
     & > *:first-child {
         margin-bottom: 3em;
@@ -64,6 +68,28 @@ body {
         & > *:first-child {
             margin-bottom: 0;
             flex: 1;
+        }
+    }
+}
+.taglines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.alternate {
+    text-align: center;
+    & > *:first-child {
+        margin-bottom: 3em;
+    }
+    @include mq(md) {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        & > *:first-child {
+            margin-bottom: 0;
+            flex: 1;
+            text-align: right;
         }
     }
 
