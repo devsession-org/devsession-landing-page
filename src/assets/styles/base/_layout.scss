@@ -36,3 +36,40 @@ body {
     margin-right: auto;
     max-width: $container-max-width;
 }
+
+.md-right {
+    @include mq(md) {
+        text-align: right;
+    }
+}
+
+.mb-1 {
+    margin-bottom: 0.25em;
+}
+
+.mb-2 {
+    margin-bottom: 0.5em;
+}
+
+.hero {
+    padding-bottom: 2em;
+    text-align: center;
+    & > *:first-child {
+        margin-bottom: 3em;
+    }
+    @include mq(md) {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        & > *:first-child {
+            margin-bottom: 0;
+            flex: 1;
+        }
+    }
+
+    .taglines {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
