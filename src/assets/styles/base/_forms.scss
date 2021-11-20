@@ -1,6 +1,6 @@
 form {
-    input {
-        background-color: $alternate-bg-color;
+    input[type="email"] {
+        background-color: $bg-color;
         border-width: 2;
         border-color: $green;
         border-style: solid;
@@ -10,5 +10,19 @@ form {
         padding-right: 1em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
+    }
+    input[type="submit"] {
+        border-color: $green;
+        border-width: 2;
+        background-color: $alternate-bg-color;
+        border-style: solid;
+        border-radius: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        &:hover {
+            background-color: lighten($alternate-bg-color, 10%);
+        }
     }
 }
