@@ -1,5 +1,9 @@
 form {
     input {
-        color: $gray-darkest;
+        background-color: $alternate-bg-color;
+        border-width: 0;
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
     }
 }
