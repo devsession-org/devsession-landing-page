@@ -1,9 +1,14 @@
 form {
     input {
         background-color: $alternate-bg-color;
-        border-width: 0;
+        border-width: 2;
+        border-color: $green;
+        border-style: solid;
         color: white;
         border-radius: 1em;
-        padding: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 }
