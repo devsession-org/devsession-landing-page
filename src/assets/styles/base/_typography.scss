@@ -16,7 +16,7 @@ h1 {
 
 h2 {
     font-size: 2.125rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 p {
@@ -28,6 +28,10 @@ a {
     &:visited {
         color: white;
     }
+}
+
+strong {
+    font-weight: 700;
 }
 
 .lead {

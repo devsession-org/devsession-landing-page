@@ -8,4 +8,11 @@
         padding-top: 0;
         padding-bottom: 0;
     }
+    &__left {
+        margin-left: auto;
+        margin-right: auto;
+        @include mq(md) {
+            margin-left: 0;
+        }
+    }
 }
