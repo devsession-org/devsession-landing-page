@@ -33,7 +33,8 @@ $gray-dark: #55595c;
 $gray: #818a91;
 $gray-light: #eceeef;
 $gray-lightest: #f7f7f9;
-$green: #5EFF71;
+$green: #4DD15D;
+$active-green: #4DD15D;
 
 // Brand Colors
 
@@ -41,9 +42,10 @@ $brand-red: #fc6767;
 
 // Color Mappings
 
-$bg-color: #232323;
-$alternate-bg-color: lighten($bg-color, 10%);
-$text-color: #fff;
+
+$text-bg-color: #232323;
+$bg-color: #010409;
+$text-color: $green;
 $brand-color-primary: $green;
 $brand-color-primary-offset: darken($green, 6%);
 

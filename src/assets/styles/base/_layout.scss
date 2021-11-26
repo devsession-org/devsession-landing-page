@@ -38,10 +38,6 @@ body {
     width:100%;
 }
 
-.highlight {
-    background-color: $alternate-bg-color;
-}
-
 .md-right {
     @include mq(md) {
         text-align: right;
@@ -75,6 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: $text-bg-color;
 }
 .alternate {
     text-align: center;
@@ -101,4 +98,7 @@ body {
 }
 #svg21948 {
     max-width: 400px;
+    @include mq(md) {
+        width: 400px;
+    }
 }
