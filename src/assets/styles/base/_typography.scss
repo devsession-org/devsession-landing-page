@@ -28,6 +28,9 @@ a {
     &:visited {
         color: $green;
     }
+    &:hover {
+        color: $active-green;
+    }
 }
 
 strong {
