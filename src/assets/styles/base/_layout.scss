@@ -30,6 +30,12 @@ body {
     }
 }
 
+.centered-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .container {
     padding-top: 4em;
     padding-bottom: 4em;
@@ -61,9 +67,9 @@ body {
         text-align: left;
         width: 100%;
         display: flex;
+        justify-content: space-between;
         & > *:first-child {
             margin-bottom: 0;
-            flex: 1;
         }
     }
 }
@@ -72,6 +78,7 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: $text-bg-color;
+    padding: 2em;
 }
 .alternate {
     text-align: center;
@@ -82,10 +89,10 @@ body {
         text-align: left;
         width: 100%;
         display: flex;
+        justify-content: space-between;
         flex-direction: row-reverse;
         & > *:first-child {
             margin-bottom: 0;
-            flex: 1;
             text-align: right;
         }
     }
