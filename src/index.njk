@@ -4,8 +4,9 @@ eleventyNavigation:
   key: Home
 ---
 
-<div class="container">
-  <section class="hero">
+<div class="container" id="main">
+  <section class="alternate">
+  <div class="centered-image">{% include "./includes/hero_image.njk" %}</div>
     <div class="taglines">
       <h1 class="mb-1">Concurrent Coding</h1>
       <h2 class="mb-2">From your own IDE</h2>
@@ -14,9 +15,6 @@ eleventyNavigation:
         <input type="email" id="email" name="email" placeholder="Email Address">
         <input type="submit" value="Sign up">
       </form>
-    </div>
-    <div class="md-right">
-      {% include "./includes/hero_image.njk" %}
     </div>
   </section>
 </div>
@@ -30,7 +28,7 @@ eleventyNavigation:
       <p class="mb-2">Throw up a quick link to collab with!</p>
       <a href="#">Sign up to learn more!</a>
     </div>
-    <div class="md-right">
+    <div class="lg-right">
       {% image "./src/assets/images/hero.png", "DevSession Logo" %}
     </div>
   </section>
@@ -45,7 +43,7 @@ eleventyNavigation:
       <p class="mb-2">And with the click of one link</p>
       <a href="#">Sign up to learn more!</a>
     </div>
-    <div class="md-right">
+    <div class="lg-right">
       {% include "./includes/ide_sync_image.njk" %}
     </div>
   </section>
