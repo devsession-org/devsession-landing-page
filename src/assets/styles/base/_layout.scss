@@ -117,3 +117,9 @@ hr {
         width: 400px;
     }
 }
+#svg2135 {
+    max-width: 600px;
+    @include mq(md) {
+        width: 600px;
+    }
+}
