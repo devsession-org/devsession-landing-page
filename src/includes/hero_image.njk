@@ -1,7 +1,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/MotionPathPlugin.min.js"></script>
-
 <svg
+   width="600"
+   height="450"
    viewBox="0 0 158.75 119.0625"
    version="1.1"
    id="svg2135"
@@ -23,9 +24,9 @@
      showgrid="false"
      units="px"
      inkscape:snap-global="false"
-     inkscape:zoom="4"
+     inkscape:zoom="1"
      inkscape:cx="139"
-     inkscape:cy="376.375"
+     inkscape:cy="136.5"
      inkscape:window-width="1892"
      inkscape:window-height="1008"
      inkscape:window-x="1934"
@@ -2096,28 +2097,24 @@
            x="123.38319"
            y="96.756416">VIM</tspan></text>
     </g>
-    <g
-       id="g127733"
-       transform="translate(31.687226,25.163201)">
-      <rect
-         style="opacity:1;fill:#010409;fill-opacity:1;stroke:none;stroke-width:0.728671;stroke-miterlimit:4;stroke-dasharray:1.45734, 1.45734;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         id="rect125833"
-         width="15.521081"
-         height="5.7992344"
-         x="39.927216"
-         y="6.6845241" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#505050;fill-opacity:1;stroke-width:0.264583"
-         x="42.040508"
-         y="11.658473"
-         id="text121535"><tspan
-           sodipodi:role="line"
-           id="tspan121533"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#505050;fill-opacity:1;stroke-width:0.264583"
-           x="42.040508"
-           y="11.658473">Code</tspan></text>
-    </g>
+    <rect
+       style="fill:#010409;fill-opacity:1;stroke:none;stroke-width:0.728671;stroke-miterlimit:4;stroke-dasharray:1.45734, 1.45734;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect125833"
+       width="15.521081"
+       height="5.7992344"
+       x="71.614441"
+       y="31.847725" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.25;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="73.727737"
+       y="36.821674"
+       id="text121535"><tspan
+         sodipodi:role="line"
+         id="tspan121533"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;font-family:'Iosevka Term';-inkscape-font-specification:'Iosevka Term, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="73.727737"
+         y="36.821674">Code</tspan></text>
     <g
        id="vscode-orb">
       <path
@@ -2414,6 +2411,7 @@
     </g>
   </g>
 </svg>
+
 <script>
 runThirdAnimation();
 function runThirdAnimation() {
@@ -2469,7 +2467,7 @@ function runThirdAnimation() {
 
 
   animateOrbs();
-  animateSatellites();
+  // animateSatellites();
   // const mainTimeline = gsap.timeline({repeat: "-1", repeatDelay: 30}).timeScale(7)
   const mainTimeline = gsap.timeline({repeat: "-1"})
   // const mainTimeline = gsap.timeline()
@@ -2494,7 +2492,8 @@ function typingSecond0() {
   changeManyElements(tl, [addedLine1, addedLine2, addedLine3, addedLine4, addedLine5, addedLine6, addedLine7, addedLine8], {opacity: 0, duration: 0}, 0);
 
   // yellow
-  changeElement(tl, yellowCursor, {y: "-=15", x: "-=21", ease: "bounce", duration: 0.5}, 0);
+  // changeElement(tl, yellowCursor, {y: "-=15", x: "-=21", ease: "power1", duration: 0.5}, 0);
+  moveCursor(tl, yellowCursor, {y: "-=15", x: "-=21", ease: "power1.inOut", duration: 0.5}, 0);
   typeInLine(tl, yellowCursor, line5, 0.2, ">");
   typeInLine(tl, yellowCursor, line5, 0.2, ">");
   typeInLine(tl, yellowCursor, line5, 0.1, ">");
@@ -2519,7 +2518,8 @@ function typingSecond0() {
   // cyan
   typeInLine(tl, cyanCursor, line6, 0.3, 0);
   typeInLine(tl, cyanCursor, line6, 0.3, ">");
-  changeElement(tl, cyanCursor, {x: "+=26", ease: "bounce", duration: 0.4}, ">");
+  // changeElement(tl, cyanCursor, {x: "+=26", ease: "power1", duration: 0.4}, ">");
+  moveCursor(tl, cyanCursor, {x: "+=26", ease: "power1.inOut", duration: 0.4}, ">");
 
   return tl;
 }
@@ -2535,7 +2535,8 @@ function typingSecond1() {
   typeInLine(tl, yellowCursor, line5, 0.1, ">");
   
   // green
-  changeElement(tl, greenCursor, {y: "+=5", x: "-=16.5"}, 0);
+  // changeElement(tl, greenCursor, {y: "+=5", x: "-=16.5"}, 0);
+  moveCursor(tl, greenCursor, {y: "+=5", x: "-=16.5"}, 0);
   changeElement(tl, addedLine2, {opacity: 1, scaleX: 0, duration: 0}, 0);
   moveElementsDown(tl, [line2, line3, line4, line5, line6, line7, line8, purpleCursor, cyanCursor, yellowCursor], 0); // 0.5 seconds
   typeInLine(tl, greenCursor, addedLine2, 0.2, ">", {scale: 0.05});
@@ -2583,7 +2584,8 @@ function typingSecond2() {
   typeInLine(tl, greenCursor, addedLine2, 0.1, ">", {scale: 0.03});
 
   // purple
-  changeElement(tl, purpleCursor, {y: "-=5", x: "-=3", ease: "bounce", duration: 0.5}, 0);
+  // changeElement(tl, purpleCursor, {y: "-=5", x: "-=3", ease: "power1", duration: 0.5}, 0);
+  moveCursor(tl, purpleCursor, {y: "-=5", x: "-=3", ease: "power1.inOut", duration: 0.5}, 0);
   cursorBackspace(tl, purpleCursor, line3, 0.2, ">", {scale: 0.05});
   cursorBackspace(tl, purpleCursor, line3, 0.2, ">", {scale: 0.05});
   cursorBackspace(tl, purpleCursor, line3, 0.1, ">", {scale: 0.05});
@@ -2591,7 +2593,8 @@ function typingSecond2() {
   // cyan
   cursorBackspace(tl, cyanCursor, line6, 0.2, 0);
   cursorBackspace(tl, cyanCursor, line6, 0.2, ">");
-  changeElement(tl, cyanCursor, {y: "-=30", x: "-=30", ease: "bounce", duration: 0.5}, ">");
+  // changeElement(tl, cyanCursor, {y: "-=30", x: "-=30", ease: "power1", duration: 0.5}, ">");
+  moveCursor(tl, cyanCursor, {y: "-=30", x: "-=30", ease: "power1.inOut", duration: 0.5}, ">");
   cursorBackspace(tl, cyanCursor, line1, 0.2, ">");
   cursorBackspace(tl, cyanCursor, line1, 0.2, ">");
 
@@ -2602,7 +2605,8 @@ function typingSecond3() {
   var tl = gsap.timeline();
 
   // yellow
-  changeElement(tl, yellowCursor, {x: "-=21", ease: "bounce", duration: 0.5}, 0);
+  // changeElement(tl, yellowCursor, {x: "-=21", ease: "power1", duration: 0.5}, 0);
+  moveCursor(tl, yellowCursor, {x: "-=21", ease: "power1.inOut", duration: 0.5}, 0);
   cursorBackspace(tl, yellowCursor, line5, 0.1, ">");
   cursorBackspace(tl, yellowCursor, line5, 0.1, ">");
   cursorBackspace(tl, yellowCursor, line5, 0.2, ">");
@@ -2621,7 +2625,8 @@ function typingSecond3() {
   typeInLine(tl, purpleCursor, line3, 0.2, 0, {scale: 0.05});
   tabInLine(tl, purpleCursor, line3, 0.2, ">", {scale: 0.05});
   typeInLine(tl, purpleCursor, line3, 0.1, ">", {scale: 0.05});
-  changeElement(tl, purpleCursor, {y: "+=5", x: "-=29.5", duration: 0.5}, ">");
+  // changeElement(tl, purpleCursor, {y: "+=5", x: "-=29.5", duration: 0.5}, ">");
+  moveCursor(tl, purpleCursor, {y: "+=5", x: "-=29.5", duration: 0.5}, ">");
   moveElementsDown(tl, [line4, line5, line6, line7, line8, yellowCursor], "<"); // 0.5 seconds
 
   // cyan
@@ -2640,14 +2645,16 @@ function typingSecond4() {
   // yellow
   typeInLine(tl, yellowCursor, line5, 0.1, 0, {scale: 0.08});
   tabInLine(tl, yellowCursor, line5, 0.2, ">", {scale: 0.08});
-  changeElement(tl, yellowCursor, {y: "-=29.5", x: "+=11", duration: 0.3, ease: "bounce"}, ">");
+  // changeElement(tl, yellowCursor, {y: "-=29.5", x: "+=11", duration: 0.3, ease: "power1"}, ">");
+  moveCursor(tl, yellowCursor, {y: "-=29.5", x: "+=11", duration: 0.3, ease: "power1.inOut"}, ">");
   cursorBackspace(tl, yellowCursor, addedLine2, 0.1, ">", {scale: "0.04"});
   cursorBackspace(tl, yellowCursor, addedLine2, 0.1, ">", {scale: "0.04"});
   cursorBackspace(tl, yellowCursor, addedLine2, 0.1, ">", {scale: "0.04"});
   typeInLine(tl, yellowCursor, addedLine2, 0.1, ">", {scale: "0.04"});
   
   // green
-  changeElement(tl, greenCursor, {y: "+=5", x: "-=37"}, 0);
+  // changeElement(tl, greenCursor, {y: "+=5", x: "-=37"}, 0);
+  moveCursor(tl, greenCursor, {y: "+=5", x: "-=37"}, 0);
   changeElement(tl, addedLine3, {opacity: 1, scaleX: 0, duration: 0}, 0);
   moveElementsDown(tl, [line2, line3, line4, line5, line6, line7, line8, purpleCursor, yellowCursor], 0); // 0.5 seconds
   typeInLine(tl, greenCursor, addedLine3, 0.1, ">", {scale: 0.07});
@@ -2657,7 +2664,8 @@ function typingSecond4() {
 
   // purple
   changeElement(tl, addedLine5, {opacity: 1, scaleX: 0, y: "+=5", duration: 0}, 0);
-  changeElement(tl, purpleCursor, {x: "-=5", ease: "bounce"}, 0);
+  // changeElement(tl, purpleCursor, {x: "-=5", ease: "power1"}, 0);
+  moveCursor(tl, purpleCursor, {x: "-=5", ease: "power1.inOut"}, 0);
   typeInLine(tl, purpleCursor, addedLine5, 0.1, ">");
   typeInLine(tl, purpleCursor, addedLine5, 0.1, ">");
   typeInLine(tl, purpleCursor, addedLine5, 0.1, ">");
@@ -2686,7 +2694,8 @@ function typingSecond5() {
   tabInLine(tl, yellowCursor, addedLine2, 0.2, ">", {scale: "0.04"});
   
   // green
-  changeElement(tl, greenCursor, {y: "+=10", x: "-=15.5", duration: 0.5, ease: "bounce"}, 0);
+  // changeElement(tl, greenCursor, {y: "+=10", x: "-=15.5", duration: 0.5, ease: "power1"}, 0);
+  moveCursor(tl, greenCursor, {y: "+=10", x: "-=15.5", duration: 0.5, ease: "power1.inOut"}, 0);
   changeElement(tl, line3, {opacity: 0, duration: 0.5}, ">");
   moveElementsUp(tl, [line4, line5, line6, line7, line8, cyanCursor, purpleCursor, addedLine5], "<"); // 0.5 seconds
 
@@ -2698,7 +2707,8 @@ function typingSecond5() {
   cursorBackspace(tl, purpleCursor, addedLine5, 0.2, ">");
 
   // cyan
-  changeElement(tl, cyanCursor, {y: "+=30", x: "-=2", ease: "bounce", duration: 0.5}, 0);
+  // changeElement(tl, cyanCursor, {y: "+=30", x: "-=2", ease: "power1", duration: 0.5}, 0);
+  moveCursor(tl, cyanCursor, {y: "+=30", x: "-=2", ease: "power1.inOut", duration: 0.5}, 0);
   cursorBackspace(tl, cyanCursor, line4, 0.1, ">");
   cursorBackspace(tl, cyanCursor, line4, 0.1, ">");
   cursorBackspace(tl, cyanCursor, line4, 0.1, ">");
@@ -2712,13 +2722,15 @@ function typingSecond6() {
   var tl = gsap.timeline();
 
   // yellow
-  changeElement(tl, yellowCursor, {y: "+=25.1", x: "-=11", duration: 0.5, ease: "bounce"}, 0);
+  // changeElement(tl, yellowCursor, {y: "+=25.1", x: "-=11", duration: 0.5, ease: "power1"}, 0);
+  moveCursor(tl, yellowCursor, {y: "+=25.1", x: "-=11", duration: 0.5, ease: "power1.inOut"}, 0);
   changeElement(tl, yellowCursor, {y: "+=5", x: "-=25.3", duration: 0.5}, ">");
   moveElementsDown(tl, [line7], "<"); // 0.5 seconds
   changeElement(tl, addedLine8, {opacity: 1, scaleX: 0, duration: 0}, "<");
   
   // green
-  changeElement(tl, greenCursor, {y: "-=5", x: "+=17", duration: 0.5, ease: "bounce"}, 0);
+  // changeElement(tl, greenCursor, {y: "-=5", x: "+=17", duration: 0.5, ease: "power1"}, 0);
+  moveCursor(tl, greenCursor, {y: "-=5", x: "+=17", duration: 0.5, ease: "power1.inOut"}, 0);
   cursorBackspace(tl, greenCursor, line2, 0.1, ">", {scale: "0.04"});
   cursorBackspace(tl, greenCursor, line2, 0.1, ">", {scale: "0.04"});
   typeInLine(tl, greenCursor, line2, 0.2, ">", {scale: "0.04"});
@@ -2731,7 +2743,8 @@ function typingSecond6() {
   typeInLine(tl, purpleCursor, addedLine5, 0.2, ">");
 
   // cyan
-  changeElement(tl, cyanCursor, {y: "-=25", x: "-=2", ease: "bounce", duration: 0.5}, 0);
+  // changeElement(tl, cyanCursor, {y: "-=25", x: "-=2", ease: "power1", duration: 0.5}, 0);
+  moveCursor(tl, cyanCursor, {y: "-=25", x: "-=2", ease: "power1.inOut", duration: 0.5}, 0);
   cursorBackspace(tl, cyanCursor, line1, 0.1, ">");
   cursorBackspace(tl, cyanCursor, line1, 0.1, ">");
   cursorBackspace(tl, cyanCursor, line1, 0.1, ">");
@@ -2752,14 +2765,16 @@ function typingSecond7() {
   typeInLine(tl, yellowCursor, line6, 0.1, ">", {scale: 0.05});
 
   // green
-  changeElement(tl, greenCursor, {y: "-=5", x: "-=7", duration: 0.5, ease: "bounce"}, 0);
+  // changeElement(tl, greenCursor, {y: "-=5", x: "-=7", duration: 0.5, ease: "power1"}, 0);
+  moveCursor(tl, greenCursor, {y: "-=5", x: "-=7", duration: 0.5, ease: "power1.inOut"}, 0);
   typeInLine(tl, greenCursor, addedLine3, 0.2, ">", {scale: "0.08"});
   tabInLine(tl, greenCursor, addedLine3, 0.1, ">", {scale: "0.08"});
   typeInLine(tl, greenCursor, addedLine3, 0.1, ">", {scale: "0.08"});
   typeInLine(tl, greenCursor, addedLine3, 0.1, ">", {scale: "0.08"});
 
   // purple
-  changeElement(tl, purpleCursor, {y: "-=15", x: "-=7", duration: 0.5, ease: "bounce"}, 0);
+  // changeElement(tl, purpleCursor, {y: "-=15", x: "-=7", duration: 0.5, ease: "power1"}, 0);
+  moveCursor(tl, purpleCursor, {y: "-=15", x: "-=7", duration: 0.5, ease: "power1.inOut"}, 0);
   cursorBackspace(tl, purpleCursor, addedLine2, 0.2, ">");
   cursorBackspace(tl, purpleCursor, addedLine2, 0.1, ">");
   cursorBackspace(tl, purpleCursor, addedLine2, 0.2, ">");
@@ -2802,7 +2817,8 @@ function typingSecond8() {
   typeInLine(tl, purpleCursor, addedLine2, 0.1, ">");
 
   // cyan
-  changeElement(tl, cyanCursor, {y: "+=25", x: "+=10", duration: 0.5, ease: "bounce"}, 0)
+  // changeElement(tl, cyanCursor, {y: "+=25", x: "+=10", duration: 0.5, ease: "power1"}, 0)
+  moveCursor(tl, cyanCursor, {y: "+=25", x: "+=10", duration: 0.5, ease: "power1.inOut"}, 0)
   typeInLine(tl, cyanCursor, line4, 0.3, ">");
   tabInLine(tl, cyanCursor, line4, 0.1, ">");
   typeInLine(tl, cyanCursor, line4, 0.1, ">");
@@ -2814,7 +2830,8 @@ function typingSecond9() {
   var tl = gsap.timeline();
 
   // yellow
-  changeElement(tl, yellowCursor, {y: "-=20", x: "-=7", duration: 0.5, ease: "bounce"}, 0);
+  // changeElement(tl, yellowCursor, {y: "-=20", x: "-=7", duration: 0.5, ease: "power1"}, 0);
+  moveCursor(tl, yellowCursor, {y: "-=20", x: "-=7", duration: 0.5, ease: "power1.inOut"}, 0);
   cursorBackspace(tl, yellowCursor, line2, 0.1, ">", {scale: 0.04});
   cursorBackspace(tl, yellowCursor, line2, 0.1, ">", {scale: 0.04});
   cursorBackspace(tl, yellowCursor, line2, 0.1, ">", {scale: 0.04});
@@ -2833,7 +2850,8 @@ function typingSecond9() {
   typeInLine(tl, greenCursor, addedLine3, 0.1, ">", {scale: 0.08});
 
   // purple
-  changeElement(tl, purpleCursor, {x: "-=13", ease: "bounce"}, 0.5, 0);
+  // changeElement(tl, purpleCursor, {x: "-=13", ease: "power1"}, 0.5, 0);
+  moveCursor(tl, purpleCursor, {x: "-=13", ease: "power1.inOut"}, 0.5, 0);
   cursorBackspace(tl, purpleCursor, addedLine2, 0.1, ">", {scale: 0.04});
   cursorBackspace(tl, purpleCursor, addedLine2, 0.1, ">", {scale: 0.04});
   cursorBackspace(tl, purpleCursor, addedLine2, 0.2, ">", {scale: 0.04});
@@ -2946,11 +2964,11 @@ function animateSatellites () {
   }, 3);
   return tl;
 }
-  function moveCursor(tl, attrs, phaseNumber) {
-    tl.to(cursor,
-       Object.assign({}, { duration: 0.5 }, attrs), phaseNumber
-    );
-  }
+//   function moveCursor(tl, attrs, phaseNumber) {
+//     tl.to(cursor,
+//        Object.assign({}, { duration: 0.5 }, attrs), phaseNumber
+//     );
+//   }
   function changeElement(tl, el, attrs, phaseNumber) {
     tl.to(el,
        Object.assign({}, { duration: 0.5 }, attrs), phaseNumber
@@ -3030,8 +3048,57 @@ function animateSatellites () {
   function glowCyanOrbStop(tl, phaseNumber, delay) {
     changeManyElements(tl, [sublimeGlow, sublimeSatelliteGlow], {opacity: 0, duration: 0}, phaseNumber);
   }
+  function moveCursor(tl, cursor, attrs, phaseNumber) {
+    if (cursor == yellowCursor) {
+      tl.to(vimSatellite, {
+          motionPath: {
+                  path: vimOrbit,
+                  align: vimOrbit,
+                  alignOrigin: [0.5, 0.5],
+                  start: 1,
+                  end: 0,
+              },
+          duration: 0.5,
+          ease: "power1.inOut"
+      }, phaseNumber);
+    } else if (cursor == purpleCursor) {
+      tl.to(vscodeSatellite, {
+          motionPath: {
+                  path: vscodeOrbit,
+                  align: vscodeOrbit,
+                  alignOrigin: [0.4, 0.5],
+                  start: 0.50,
+                  end: 1.50,
+              },
+          duration: 0.5,
+          ease: "power1.inOut"
+      }, phaseNumber);
+    } else if (cursor == cyanCursor) {
+      tl.to(sublimeSatellite, {
+          motionPath: {
+                  path: sublimeOrbit,
+                  align: sublimeOrbit,
+                  alignOrigin: [0.4, 0.5],
+                  start: 1,
+                  end: 0,
+              },
+          duration: 0.5,
+          ease: "power1.inOut"
+      }, phaseNumber);
+    } else if (cursor == greenCursor) {
+      tl.to(intellijSatellite, {
+          motionPath: {
+                  path: intellijOrbit,
+                  align: intellijOrbit,
+                  alignOrigin: [0.4, 0.5],
+                  start: 1,
+                  end: 0,
+              },
+          duration: 0.5,
+          ease: "power1.inOut"
+      }, phaseNumber);
+    }
+    changeElement(tl, cursor, attrs, "<");
+  }
 }
-
-
-</script> 
-  
+</script>
