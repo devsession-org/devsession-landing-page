@@ -82,7 +82,20 @@ body {
 
     color: $text-color;
     background-color: $bg-color;
-
+    .highlight {
+        color: $active-blue;
+        background-color: $blue-bg;
+        a {
+            color: $blue;
+            &:visited {
+                color: $blue;
+            }
+            &:hover {
+                color: $active-blue;
+            }
+        }
+    }
+      
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }

@@ -33,6 +33,10 @@ $gray-dark: #55595c;
 $gray: #818a91;
 $gray-light: #eceeef;
 $gray-lightest: #f7f7f9;
+$blue-bg: #232332;
+$blue: #4dcfd1;
+$active-blue: #5efcff;
+$green-bg: #233223;
 $green: #4DD15D;
 $active-green: #5EFF71;
 
@@ -43,7 +47,7 @@ $brand-red: #fc6767;
 // Color Mappings
 
 
-$bg-color: $gray-darkest;
+$bg-color: $green-bg;
 $text-color: $green;
 $brand-color-primary: $green;
 $brand-color-primary-offset: darken($green, 6%);
