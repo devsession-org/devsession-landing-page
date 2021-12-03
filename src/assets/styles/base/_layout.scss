@@ -122,6 +122,9 @@ hr {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include mq(lg) {
+            max-width: 35%;
+        }
     }
 }
 #svg21948 {
