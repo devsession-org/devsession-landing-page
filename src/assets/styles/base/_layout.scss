@@ -113,7 +113,6 @@ hr {
         flex-direction: row-reverse;
         & > *:first-child {
             margin-bottom: 0;
-            text-align: right;
         }
     }
 
@@ -122,9 +121,6 @@ hr {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        @include mq(lg) {
-            max-width: 35%;
-        }
     }
 }
 #svg21948 {
