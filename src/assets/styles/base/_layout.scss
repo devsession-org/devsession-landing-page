@@ -102,6 +102,9 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include mq(lg) {
+        max-width: 35%;
+    }
 }
 .alternate {
     text-align: center;
