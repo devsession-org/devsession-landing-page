@@ -82,7 +82,8 @@ body {
 
     color: $text-color;
     background-color: $bg-color;
-    .highlight {
+    .highlight,
+    article {
         color: $active-blue;
         background-color: $blue-bg;
         a {
@@ -95,7 +96,7 @@ body {
             }
         }
     }
-      
+
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }

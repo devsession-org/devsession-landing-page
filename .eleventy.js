@@ -1,42 +1,49 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
-const pluginSvgSprite = require("eleventy-plugin-svg-sprite");
+const pluginSvgSprite = require('eleventy-plugin-svg-sprite')
 const markdownIt = require('markdown-it')
 
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
 
-const Image = require("@11ty/eleventy-img");
+const Image = require('@11ty/eleventy-img')
 
 async function imageShortcode(src, alt, sizes) {
-  let metadata = await Image(src, {
-    widths: [300, 600],
-    formats: ["webp", "jpeg"],
-    outputDir: "./dist/img/"
-  });
+    let metadata = await Image(src, {
+        widths: [300, 600],
+        formats: ['webp', 'jpeg'],
+        outputDir: './dist/img/'
+    })
 
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
+    let imageAttributes = {
+        alt,
+        sizes,
+        loading: 'lazy',
+        decoding: 'async'
+    }
 
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    return Image.generateHTML(metadata, imageAttributes)
 }
 
 module.exports = function (config) {
     // Plugins
-    config.addNunjucksAsyncShortcode("image", imageShortcode);
-    config.addLiquidShortcode("image", imageShortcode);
-    config.addJavaScriptFunction("image", imageShortcode);
+    config.addNunjucksAsyncShortcode('image', imageShortcode)
+    config.addLiquidShortcode('image', imageShortcode)
+    config.addJavaScriptFunction('image', imageShortcode)
     config.addPlugin(pluginRss)
     config.addPlugin(pluginNavigation)
     config.addPlugin(pluginSvgSprite, {
-        path: "./src/assets/icons",
-        svgSpriteShortcode: "iconsprite"
+        path: './src/assets/icons',
+        svgSpriteShortcode: 'iconsprite'
+    })
+    const md = new markdownIt({
+        html: true
+    })
+
+    config.addPairedShortcode('markdown', (content) => {
+        return md.render(content)
     })
 
     // Filters
