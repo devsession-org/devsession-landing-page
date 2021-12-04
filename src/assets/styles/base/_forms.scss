@@ -1,32 +1,40 @@
 form {
-    font-size: 1.25rem;
     input {
         width: 100%;
     }
     input[type='email'] {
-        background-color: $bg-color;
-        border-width: 2;
-        border-color: $form-color;
-        border-style: dashed;
-        color: white;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        font-size: 1.25rem !important;
+        background-color: $bg-color !important;
+        border-width: 2 !important;
+        border-color: $form-color !important;
+        border-style: dashed !important;
+        color: $yellow !important;
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+        padding-top: 0.5em !important;
+        padding-bottom: 0.5em !important;
     }
-    input[type='submit'] {
-        border-color: darken($color: $form-color, $amount: 10%);
-        background-color: $form-color;
-        color: $bg-color;
-        font-weight: 800;
-        border-width: 2;
-        border-style: solid;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+    input[type='submit'],
+    button {
+        span {
+            padding: 0 !important;
+        }
+        font-size: 1.25rem !important;
+        border-color: darken($color: $form-color, $amount: 10%) !important;
+        background-color: $form-color !important;
+        color: $bg-color !important;
+        font-weight: 800 !important;
+        border-width: 2 !important;
+        border-style: solid !important;
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+        padding-top: 0.5em !important;
+        padding-bottom: 0.5em !important;
         &:hover {
-            background-color: lighten($color: $form-color, $amount: 10%);
+            background-color: lighten(
+                $color: $form-color,
+                $amount: 10%
+            ) !important;
         }
     }
     input {
