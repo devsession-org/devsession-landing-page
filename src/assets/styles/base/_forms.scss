@@ -1,35 +1,38 @@
 form {
-    input[type="email"] {
+    font-size: 1.25rem;
+    input {
+        width: 100%;
+    }
+    input[type='email'] {
         background-color: $bg-color;
         border-width: 2;
-        border-color: $green;
-        border-style: solid;
+        border-color: $form-color;
+        border-style: dashed;
         color: white;
-        border-radius: 1em;
         padding-left: 1em;
         padding-right: 1em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
-    input[type="submit"] {
-        border-color: $green;
-        background-color: $bg-color;
+    input[type='submit'] {
+        border-color: darken($color: $form-color, $amount: 10%);
+        background-color: $form-color;
+        color: $bg-color;
+        font-weight: 800;
         border-width: 2;
         border-style: solid;
-        border-radius: 1em;
         padding-left: 1em;
         padding-right: 1em;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
         &:hover {
-            border-color: $active-green;
-            color: $active-green;
+            background-color: lighten($color: $form-color, $amount: 10%);
         }
     }
     input {
         display: block;
         &:first-child {
-            margin-bottom: 1em;
+            margin-bottom: 2em;
         }
 
         margin-left: auto;

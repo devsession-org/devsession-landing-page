@@ -37,8 +37,9 @@ $blue-bg: #232332;
 $blue: #4dcfd1;
 $active-blue: #5efcff;
 $green-bg: #233223;
-$green: #4DD15D;
-$active-green: #5EFF71;
+$green: #4dd15d;
+$active-green: #5eff71;
+$yellow: #d1cb4d;
 
 // Brand Colors
 
@@ -46,20 +47,21 @@ $brand-red: #fc6767;
 
 // Color Mappings
 
-
 $bg-color: $green-bg;
 $text-color: $green;
 $copy-color: #fff;
 $brand-color-primary: $green;
 $brand-color-primary-offset: darken($green, 6%);
+$form-color: $yellow;
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: 'Iosevka Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-sans-serif: 'Iosevka Web', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 $font-family-serif: 'Times New Roman', Georgia, Times, serif;
 $font-family-monospace: Menlo, Monaco, Consolas, 'Andale Mono', 'Courier New',
     monospace;
