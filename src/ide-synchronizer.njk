@@ -20,8 +20,32 @@ eleventyNavigation:
   </section>
 </div>
   <article class="container highlight">
-{% markdown %}
-  {% include "./includes/ide_synchronizer.md" %}
-{% endmarkdown %}
+<h1 id="synchronize-your-editors">Synchronize Your Editors</h1>
+<p><em>&quot;My favorite part of development is resolving large and complex marge conflicts.&quot;</em>
+<em>--No one, ever</em></p>
+<p>Developing software is a team effort, and yet our very basis for collaboration - version control systems such as git - offers a poor experience when it comes to working with our teammates. Instead of working along side them, we branch out into a separate world and deal with any contradictions that happened in the meanwhile once we finish our change.</p>
+<p>Developers make countless decisions relying on numerous assumptions every day. No matter how well we coordinate our work or separate ourselves into silos, we&#39;re bound to contradict each other somewhere down the line. Modern development methodologies teach us to shorten the feedback loop. To work in small chunks so as to minimize the size of the contradictions we make with our teammates and thus reduce the time we spend resolving those conflicts.</p>
+<p>What if we could take it one step further? Have a Google-docs-like experience for writing software, in which we constantly see what our teammates are doing and are able to not only immediately notice when we step on each other&#39;s toes, but also to actively collaborate on the same feature?</p>
+<p>This is the vision we offer with Devsession.</p>
+<h2 id="how-will-it-work-">How will it work?</h2>
+<p><a href="https://trunkbaseddevelopment.com/">Trunk based development</a> teaches us that instead of having &quot;feature branches&quot; that are prone to accumulate conflict, we should instead opt to have <a href="https://trunkbaseddevelopment.com/feature-flags/">&quot;feature flags&quot;</a>. Break our work into small unfinished chunks that can live together inside the same code base without interfering with the main functionality of our application.</p>
+<p>Devsession will make extensive use of these flags, assigning one to each developer in the system and giving other developers immediate visibility on them. Developers in the team will be working on the same code at the same time using their separate local environments. At any time, they would be able to see what their other teammates are up to (by following their cursor), and to switch their feature flag on and off. That way, they can make sure the feature their fellow developers are working on does not interfere with their own feature. Or in other words - that their assumptions are still in sync.</p>
+<p>Devsession will be implemented as a plugin for every IDE that has a plugin system, meaning that whether you&#39;re using vim, VSCode, IntelliJ or something else - you will not need to compromise on your environment or tools.</p>
+<h2 id="devsession-will-work-alongside-git">Devsession will work alongside Git</h2>
+{% image "./src/assets/images/devsession-git-architecture.png", "Diagram of Devsession using Zellij", "(min-width: 30em) 50vw, 100vw" %}
+<p>We at Devsession don&#39;t dislike Git. We think it&#39;s a great tool for version control, but we feel it&#39;s time to re-examine it as a tool for collaboration.</p>
+<h2 id="how-do-you-change-an-infrastructure-that-many-parts-of-the-code-base-depend-on-">How do you change an infrastructure that many parts of the code base depend on?</h2>
+<p>A question that often arises when thinking about this model is: what if you need to change a very central part of the code? One with lots of dependents? Doing so will surely ruin the work of all developers concurrently working on it, right?</p>
+<p>Well, yes. But it doesn&#39;t have to. While Devsession itself will protect the other developers with its feature-flags system, a good practice in such cases would be to use the <a href="https://trunkbaseddevelopment.com/branch-by-abstraction/">branch by abstraction</a> method. This method essentially means that the developer would be creating an abstraction around the piece of shared infrastructure, having its own feature-flag of sorts. This flag can be kept off for the rest of the team until the change is finished.</p>
+<p>An added benefit is that multiple team members can collaborate on this infrastructure change - either directly or by checking their unfinished code against it to make sure nothing broke.</p>
+<h2 id="what-happens-when-two-develoeprs-change-the-same-line-of-code-at-the-same-time-">What happens when two develoeprs change the same line of code at the same time?</h2>
+<p>Since all the state of the code is synchronized through the Devsession instance, the instance is not forced to represent conflicts with textual markers like git does in such cases. This means that Devsession will be able to alert the developers of the conflict and have them resolve it before they can switch on each other&#39;s feature flag.</p>
+<p>This is a stop gap solution that is presented for the resilience of the system, but such cases are best resolved by the two developers communicating about their conflicting assumptions. This is something both of them would be able to notice immediately, rather than potentially days or even weeks down the line.</p>
+<h2 id="additional-features">Additional features</h2>
+<h3 id="sharing-servers">Sharing servers</h3>
+<p>Combined with <a href="/terminal-sharing.html">Devsession&#39;s Terminal Sharing</a>, we feel a team can get a very powerful experience. Devsession also intends to offer a secure way to expose development (web) servers between users in order to facilitate development tasks.</p>
+<h3 id="code-heat-map">Code heat map</h3>
+<p>Often, in large code bases, it&#39;s not always trivial to understand which parts of the code should be refactored to get the best result. Devsession is in a unique position to be able to provide a &quot;heat map&quot; of the code, giving insights into where developers spend most of their time.</p>
+
     </div>
   </article>
