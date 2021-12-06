@@ -39,6 +39,20 @@ body {
     border-width: 0 0 1px 1px;
 }
 
+.grid {
+    display: grid;
+    grid-column-gap: 4em;
+    picture,
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 5em;
+    }
+    @include mq(lg) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .layout {
     display: flex;
     flex-direction: column;
