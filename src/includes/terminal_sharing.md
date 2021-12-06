@@ -14,7 +14,7 @@ The Devsession terminal sharing is provided as a service to the Zellij community
 
 ## Technical details
 
-**TODO: diagram**
+{% image "./src/assets/images/devsession-zellij-diagram.png", "DevSession Logo", "(min-width: 30em) 50vw, 100vw" %}
 
 While other terminal session sharing solutions exist, one of the things that make Devsession stand out is its ability to render more than one cursor on the same screen. This is possible because Zellij is built in a client/server model, similar to how a web page works. The server holds the state of the terminal session and runs on the user's machine, and supports connections from local clients through an IPC bus or remote clients through http.
 
