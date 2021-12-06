@@ -141,12 +141,10 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include mq(lg) {
-        max-width: 35%;
-    }
 }
 .alternate {
     text-align: center;
+    gap: 2em;
     @include mq(lg) {
         text-align: left;
         width: 100%;
