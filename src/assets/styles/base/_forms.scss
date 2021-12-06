@@ -53,3 +53,12 @@ form {
         }
     }
 }
+
+.highlight form {
+    input[type='email'] {
+        background-color: $blue-bg !important;
+    }
+    button {
+        color: $blue-bg !important;
+    }
+}
