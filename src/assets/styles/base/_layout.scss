@@ -205,3 +205,12 @@ hr {
         width: 600px;
     }
 }
+
+#svg31004 {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(lg) {
+        width: 350px;
+    }
+}
