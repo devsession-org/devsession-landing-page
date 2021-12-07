@@ -57,12 +57,34 @@
 }
 
 @font-face {
+    font-family: 'Iosevka, Heavy';
+    font-display: swap;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    src: url('/assets/fonts/iosevka/woff2/iosevka-term-heavy.woff2')
+            format('woff2'),
+        url('/assets/fonts/iosevka/ttf/iosevka-term-heavy.ttf')
+            format('truetype');
+}
+@font-face {
+    font-family: 'Iosevka';
+    font-display: swap;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    src: url('/assets/fonts/iosevka/woff2/iosevka-term-regular.woff2')
+            format('woff2'),
+        url('/assets/fonts/iosevka/ttf/iosevka-term-regular.ttf')
+            format('truetype');
+}
+@font-face {
     font-family: 'Iosevka Web';
     font-display: swap;
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-termjjjjjwoff2')
+    src: url('/assets/fonts/iosevka/woff2/iosevka-term-light.woff2')
             format('woff2'),
         url('/assets/fonts/iosevka/ttf/iosevka-term-light.ttf')
             format('truetype');
