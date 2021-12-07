@@ -4,7 +4,7 @@
 //     font-display: swap;
 //     font-weight: 400;
 //     src: local('Noe Display'), local('NoeDisplay-Regular'),
-//         url('/assets/fonts/noe-display-regular.woff2') format('woff2'),
+//         url('/assets/fonts/noe-display-regular.woff') format('woff'),
 //         url('/assets/fonts/noe-display-regular.woff') format('woff');
 // }
 
@@ -14,21 +14,9 @@
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-bold.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-bold.ttf')
-            format('truetype');
-}
-
-@font-face {
-    font-family: 'Iosevka Web';
-    font-display: swap;
-    font-weight: 800;
-    font-stretch: normal;
-    font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-extrabold.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-extrabold.ttf')
+    src: url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-bold.woff')
+            format('woff'),
+        url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-bold.ttf')
             format('truetype');
 }
 
@@ -38,9 +26,9 @@
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-heavy.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-heavy.ttf')
+    src: url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-heavy.woff')
+            format('woff'),
+        url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-heavy.ttf')
             format('truetype');
 }
 @font-face {
@@ -49,9 +37,9 @@
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-regular.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-regular.ttf')
+    src: url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-regular.woff')
+            format('woff'),
+        url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-regular.ttf')
             format('truetype');
 }
 @font-face {
@@ -60,21 +48,9 @@
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-light.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-light.ttf')
-            format('truetype');
-}
-
-@font-face {
-    font-family: 'Iosevka Web';
-    font-display: swap;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-semibold.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-semibold.ttf')
+    src: url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-light.woff')
+            format('woff'),
+        url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-light.ttf')
             format('truetype');
 }
 
@@ -84,8 +60,8 @@
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    src: url('/assets/fonts/iosevka/woff2/iosevka-term-regular.woff2')
-            format('woff2'),
-        url('/assets/fonts/iosevka/ttf/iosevka-term-regular.ttf')
+    src: url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-regular.woff')
+            format('woff'),
+        url('https://cdn.jsdelivr.net/npm/@typopro/web-iosevka@3.7.5/TypoPRO-iosevka-term-regular.ttf')
             format('truetype');
 }
