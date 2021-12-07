@@ -36,11 +36,11 @@ form {
         padding-right: 1em !important;
         padding-top: 0.5em !important;
         padding-bottom: 0.5em !important;
-        &:hover {
-            background-color: lighten(
-                $color: $form-color,
-                $amount: 10%
-            ) !important;
+        &:hover, &:focus {
+            span {
+                background-color: $active-yellow !important;
+            }
+            background-color: $active-yellow !important;
         }
     }
     input {

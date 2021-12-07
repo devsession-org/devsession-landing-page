@@ -1,7 +1,7 @@
 {
-    "title": "Eleventastic",
-    "description": "An Eleventy Starter Kit",
-    "url": "https://eleventastic.netlify.app",
+    "title": "Devsession - Share your Terminal and Synchronize your Editors",
+    "description": "A set of tools to enable concurrent coder collaboration",
+    "url": "https://devsession.is",
     "lang": "en",
     "locale": "en_us"
 }
