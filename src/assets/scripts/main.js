@@ -4,7 +4,10 @@ import 'focus-visible'
 // Internal Modules
 import './modules/nav'
 
-terminalSharing()
+let terminalSharingElement = document.getElementById('svg288364');
+if (typeof(terminalSharingElement) != 'undefined' && terminalSharingElement != null) {
+    terminalSharing()
+}
 function terminalSharing() {
     const gray = 'rgb(100, 100, 100)'
     const green = 'rgb(77, 209, 93)'
@@ -464,7 +467,10 @@ function terminalSharing() {
     }
 }
 
-bobAliceCodingAnimation()
+let bobAliceElement =  document.getElementById('svg21948');
+if (typeof(bobAliceElement) != 'undefined' && bobAliceElement != null) {
+    bobAliceCodingAnimation()
+}
 function bobAliceCodingAnimation() {
     const cursor = '.alice-bob-coding .rect91440-9'
     const textChunk1 = '.alice-bob-coding .text-chunk-1'
@@ -810,7 +816,10 @@ function bobAliceCodingAnimation() {
     }
 }
 
-aboveFoldAnimation()
+let aboveFoldElement =  document.getElementById('hero-image');
+if (typeof(aboveFoldElement) != 'undefined' && aboveFoldElement != null) {
+    aboveFoldAnimation()
+}
 function aboveFoldAnimation() {
     gsap.registerPlugin(MotionPathPlugin)
     const sublimeOrb = '.above-fold-animation .sublime-orb'
