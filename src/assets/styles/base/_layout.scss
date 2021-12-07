@@ -39,9 +39,18 @@ body {
     border-width: 0 0 1px 1px;
 }
 
+article {
+    max-width: 1260px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .grid {
     display: grid;
     grid-column-gap: 4em;
+    .about {
+        margin-bottom: 4em;
+    }
     picture,
     img {
         width: 150px;
@@ -50,6 +59,9 @@ body {
     }
     @include mq(lg) {
         grid-template-columns: 1fr 1fr;
+        .about {
+            margin-bottom: 0;
+        }
     }
 }
 
