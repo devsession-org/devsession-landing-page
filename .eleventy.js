@@ -80,6 +80,7 @@ module.exports = function (config) {
     config.addLayoutAlias('post', 'post.njk')
 
     // Pass-through files
+    config.addPassthroughCopy("CNAME");
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
     config.addPassthroughCopy('src/assets/images')
