@@ -214,6 +214,7 @@ hr {
 
 #svg31004 {
     max-width: 350px;
+    min-width: 250px;
     margin-left: auto;
     margin-right: auto;
     @include mq(lg) {
