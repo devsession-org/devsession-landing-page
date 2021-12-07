@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Eleventastic</title>
-    <subtitle>An Eleventy Starter Kit</subtitle>
-    <link href="https://eleventastic.netlify.app/feed.xml" rel="self" type="application/atom+xml" />
-    <link href="https://eleventastic.netlify.app" rel="alternate" type="text/html"/>
+    <title>Devsession - Share your Terminal and Synchronize your Editors</title>
+    <subtitle>A set of tools to enable concurrent coder collaboration</subtitle>
+    <link href="https://devsession.is/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://devsession.is" rel="alternate" type="text/html"/>
     <author>
-        <name>Eleventastic</name>
+        <name>Devsession - Share your Terminal and Synchronize your Editors</name>
     </author>
     
-    <updated>2020-04-12T00:00:00Z</updated>
-    
-    <id>https://eleventastic.netlify.app/</id>
-        <entry>
-            <title>An example post.</title>
-            <link href="https://eleventastic.netlify.app/posts/2020-04-12-sample-post/"/>
-            <updated>2020-04-12T00:00:00Z</updated>
-            <id>https://eleventastic.netlify.app/posts/2020-04-12-sample-post/</id>
-            <content type="html"><![CDATA[
-                <p>Lorem Ipsum Dolor.</p>
-
-            ]]></content>
-        </entry></feed>
+    <id>https://devsession.is/</id></feed>
