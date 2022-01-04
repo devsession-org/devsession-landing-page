@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Devsession - Share your Terminal and Synchronize your Editors</title>
-    <subtitle>A set of tools to enable concurrent coder collaboration</subtitle>
+    <subtitle>Terminal sharing and synchronizing IDEs, two tools to enable concurrent coding collaboration!</subtitle>
     <link href="https://devsession.is/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://devsession.is" rel="alternate" type="text/html"/>
     <author>
