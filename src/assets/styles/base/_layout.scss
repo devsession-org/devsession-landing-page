@@ -4,6 +4,32 @@ body {
     overflow-x: hidden;
 }
 
+.button {
+    text-align: center;
+    text-decoration: none;
+    border-color: darken($color: $form-color, $amount: 10%) !important;
+    background-color: $form-color !important;
+    color: $bg-color !important;
+    font-weight: 700 !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+    border-style: solid !important;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+    &:hover, &:focus {
+        span {
+            background-color: $active-yellow !important;
+        }
+        background-color: $active-yellow !important;
+    }
+}
+
+#early-access h2 {
+    margin-bottom: 1em;
+}
+
 .cornered {
     position: relative;
 }
