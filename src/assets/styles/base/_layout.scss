@@ -217,6 +217,15 @@ hr {
     }
 }
 
+#video {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(lg) {
+        width: 800px;
+    }
+}
+
 #svg31004 {
     max-width: 350px;
     min-width: 250px;

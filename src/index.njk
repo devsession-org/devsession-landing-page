@@ -6,13 +6,14 @@ eleventyNavigation:
 
 <div class="container" id="top">
   <section class="alternate">
-  <div class="centered-image">{% include "./includes/hero_image.njk" %}</div>
+  <div id="video" class="centered-image">
+  <iframe style="aspect-ratio: 16 / 9; width: 100%;" src="https://www.youtube.com/embed/b150pwOzZ9c" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0"></iframe>
+  </div>
     <div class="taglines">
       <h1 class="">Concurrent Coding</h1>
       <h2 class="mb-4">From your own IDE or terminal of choice</h2>
       <p class="mb-8">Leave large merge conflicts in the past.<br/>
       Stay connected to your team without compromising on your development tools.</p>
-      {% include "./includes/form.njk" %}
     </div>
   </section>
 </div>
@@ -58,6 +59,15 @@ eleventyNavigation:
   </section>
 </div>
 <div class="container">
+  <h2 class="center h1 mb-8">Interested in Early Access?</h2>
+  <section class="alternate">
+  <div class="centered-image">{% include "./includes/hero_image.njk" %}</div>
+    <div class="taglines">
+      {% include "./includes/form.njk" %}
+    </div>
+  </section>
+</div>
+<div class="container highlight">
   <h2 class="h1 mb-8">Meet the Team</h2>
   <section class="grid">
     <div class="about">
