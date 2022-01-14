@@ -27,7 +27,7 @@ body {
 }
 
 #early-access h2 {
-    margin-bottom: 1em;
+    margin-bottom: 10px;
 }
 
 .cornered {
@@ -53,6 +53,9 @@ body {
     top: 0;
     right: 0;
     border-width: 1px 1px 0 0;
+}
+.form-p {
+    margin-bottom: 15px;
 }
 .cornered > :first-child:before {
     bottom: 0;
