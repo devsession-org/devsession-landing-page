@@ -1,6 +1,6 @@
 <h1>Synchronize Your Editors</h1>
 
-_"My favorite part of development is resolving large and complex marge conflicts."_
+_"My favorite part of development is resolving large and complex merge conflicts."_
 --No one, ever
 
 Developing software is a team effort, and yet our very basis of collaboration - version control systems such as git - offers a poor experience when it comes to working with our teammates.
